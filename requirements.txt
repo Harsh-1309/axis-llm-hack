@@ -153,7 +153,7 @@ threadpoolctl==3.1.0
 timm==0.6.12
 tinycss2==1.2.1
 tokenizers==0.13.2
-torch==1.13.1
+torch
 torchaudio==0.12.1
 torchvision==0.13.1
 tornado==6.2
@@ -161,10 +161,8 @@ tqdm==4.65.0
 traitlets==5.1.1
 transformers==4.25.1
 trio==0.22.0
-trio-websocket==0.10.2
-typing_extensions==4.4.0
-update-checker==0.18.0
-urllib3==1.26.12
+trio-websocket==0.10.2notebook==6.5.2
+notebook_shim==0.2.2
 uvicorn==0.20.0
 wcwidth==0.2.5
 webencodings==0.5.1
