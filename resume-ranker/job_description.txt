@@ -1,0 +1,3 @@
+Job Title: Software Engineer
+Job Description: We are looking for a software engineer with experience in Python and web development. The ideal candidate should have a strong understanding of software architecture, be proficient in modern web frameworks, and have a track record of delivering high-quality code. The role involves collaborating with cross-functional teams to develop and deploy software solutions that meet customer needs.
+
