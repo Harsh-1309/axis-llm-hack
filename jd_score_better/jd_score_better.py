@@ -11,7 +11,7 @@ job_title = "Data Scientist"
 job_description = "We are seeking a skilled data scientist to join our team. You will be responsible for analyzing and interpreting complex data sets to discover actionable insights."
 
 
-def score_job_description(job_title, job_description):
+def scoreJobDescription(job_title, job_description):
 
     data_jd={}
 
@@ -38,7 +38,7 @@ def score_job_description(job_title, job_description):
 
     return data_jd
 
-def improve_job_description(job_title, job_description):
+def improveJobDescription(job_title, job_description):
 
     data_jd={}
 
