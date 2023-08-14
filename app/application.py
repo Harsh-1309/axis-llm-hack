@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash
 import json
 from jd_score_better.jd_score_better import *
 from resume_ranker.extract_resume_data import *
@@ -7,6 +7,7 @@ from cv_questions.cv_questions import *
 import openai
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'mysecretkey123!$#'
 # openai.api_key = "YOUR_OPENAI_API_KEY"
 
 from dotenv import load_dotenv
@@ -64,7 +65,9 @@ def extract_resumes():
         folder_path = request.form["folder_path"]
         data_=extract_all_resume_data(folder_path)
         
-        return "Resumes extracted successfully." #data_
+        # return "Resumes extracted successfully." #data_
+        flash("Resumes extracted successfully.")
+        return redirect(url_for("score_resumes"))
     return render_template("extract_resumes.html")
 
 @app.route("/score_resumes", methods=["GET", "POST"])
@@ -74,33 +77,13 @@ def score_resumes():
 
         if score_option == "yes":
             data_=score_all_resumes()
-            return "Resumes scored successfully."
+            # return "Resumes scored successfully."
+            flash("Resumes scored successfully.")
+            return redirect(url_for("shortlist_candidates"))
         else:
             return "Resumes not scored."
 
     return render_template("score_resumes.html")
-
-
-# @app.route("/shortlist_candidates", methods=["GET", "POST"])
-# def shortlist_candidates():
-#     if request.method == "POST":
-#         num_candidates = int(request.form["num_candidates"])
-#         return redirect(f"/generate_questions/{num_candidates}")
-
-#     return render_template("shortlist_candidates.html")
-
-# @app.route("/generate_questions/<int:num_candidates>", methods=["GET", "POST"])
-# def generate_questions(num_candidates):
-#     if request.method == "POST":
-#         generate_option = request.form.get("generate_option")
-
-#         if generate_option == "yes":
-#             data_=generate_questions_for_shortlisted(num_candidates)
-#             return "Questions generated successfully."
-#         else:
-#             return "Questions not generated."
-
-#     return render_template("generate_questions.html")
 
 @app.route("/shortlist_candidates", methods=["GET", "POST"])
 def shortlist_candidates():

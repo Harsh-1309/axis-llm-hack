@@ -100,5 +100,25 @@
                 "10": "Can you elaborate on any honors or achievements related to your academic or professional journey, such as being identified as a Special Achiever or receiving a full-time internship for graphic designing skills?"
             }
         }
+    ],
+    [
+        {
+            "candidate_id": "9dc84545-4eb3-43b9-80d4-2d858dfecc61",
+            "candidate_cv": "Candidate not found.",
+            "job_title": "Data Scientist",
+            "job_description": "We are seeking a skilled data scientist to join our team. You will be responsible for analyzing and interpreting complex data sets to discover actionable insights.",
+            "candidate_cv_questions": {
+                "1": "Can you provide examples of your experience analyzing and interpreting complex data sets?",
+                "2": "How do you approach the process of discovering actionable insights from data?",
+                "3": "What programming languages and tools do you have experience with in your data analysis work?",
+                "4": "Can you describe a challenging project where you had to apply your data analysis skills to solve a problem?",
+                "5": "How do you ensure the accuracy and reliability of your data analysis results?",
+                "6": "Can you explain a time when you used statistical methods to draw meaningful conclusions from data?",
+                "7": "How do you effectively communicate your data analysis findings to non-technical stakeholders?",
+                "8": "Can you discuss any experience you have in designing and implementing data models for predictive analysis?",
+                "9": "How do you stay up to date with the latest trends and advancements in data science and analytics?",
+                "10": "Can you tell us about any instances where you had to overcome obstacles or improve upon existing data analysis processes in your previous roles?"
+            }
+        }
     ]
 ]
