@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Description Scorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Description Scorer and Improver</h1>
+        <form method="post">
+            <label for="job_title">Job Title:</label>
+            <input type="text" name="job_title" required><br>
+            <label for="job_description">Job Description:</label>
+            <textarea name="job_description" required></textarea><br>
+            <label for="accept_desc">Accept new description? [yes/no]</label>
+            <input type="text" name="accept_desc" required><br>
+            <button type="submit">Score and Improve</button>
+        </form>
+        {% if job_description %}
+        <h2>Job Title: {{ job_title }}</h2>
+        <p><strong>Original Description:</strong> {{ job_description }}</p>
+        <p><strong>Job Description score</strong> {{score}}</p>
+        <p><strong>Improved Description:</strong> {{ improvement }}</p>
+        <p><strong>Accept Improved Description:</strong> {{ accept_desc }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
