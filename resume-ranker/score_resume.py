@@ -85,53 +85,6 @@ def score_all_resumes():
             with open(RANKED_RESUMES, "w") as file:
                 json.dump(ranked_resumes, file, indent=4)
 
-            return data_to_append
+    return ranked_resumes
 
-
-
-print(score_all_resumes())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # Load job title and description from a text file
-# with open("job_description.txt", "r") as file:
-#     lines = file.readlines()
-#     job_title = lines[0].strip().split(": ")[1]
-#     job_description = lines[1].strip().split(": ")[1]
-
-# # Read candidate information from the CSV file
-# candidates = []
-# with open("resumes_data.csv", "r", newline="", encoding="utf-8") as file:
-#     reader = csv.DictReader(file)
-#     for row in reader:
-#         candidate_id = row["Candidate ID"]  # Replace with actual candidate ID column name
-#         candidate_data_jd = score_job_description(job_title, job_description)
-#         candidates.append((candidate_id, candidate_data_jd))
-
-# # Print the list of tuples containing candidate ID, data dictionary
-# for candidate_id, data in candidates:
-#     print(f"Candidate ID: {candidate_id}")
-#     print(data)
-
-# print("Resumes rated and scores stored in the list of tuples.")
+# print(score_all_resumes())
