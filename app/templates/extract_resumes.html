@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Resumes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='extract_resume.css') }}">
+</head>
+<body>
+    <h1>Extract Resumes</h1>
+    <form action="/extract_resumes" method="post">
+        <label for="folder_path">Folder Path:</label>
+        <input type="text" id="folder_path" name="folder_path" required>
+        <button type="submit">Extract Resumes</button>
+    </form>
+</body>
+</html>

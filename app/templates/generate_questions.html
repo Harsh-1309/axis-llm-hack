@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Questions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='generate_questions.css') }}">
+</head>
+<body>
+    <h1>Generate Questions</h1>
+    <form action="{{ url_for('generate_questions', num_candidates=num_candidates) }}" method="post">
+        <p>Do you want to generate questions based on the resumes?</p>
+        <label for="generate_option_yes">Yes</label>
+        <input type="radio" id="generate_option_yes" name="generate_option" value="yes" required>
+        <label for="generate_option_no">No</label>
+        <input type="radio" id="generate_option_no" name="generate_option" value="no">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
