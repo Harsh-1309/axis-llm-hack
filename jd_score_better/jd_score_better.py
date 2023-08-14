@@ -7,8 +7,8 @@ openai.api_key = os.getenv("ACCESS_TOKEN")
 
 
 
-job_title = "Data Scientist"
-job_description = "We are seeking a skilled data scientist to join our team. You will be responsible for analyzing and interpreting complex data sets to discover actionable insights."
+# job_title = "Data Scientist"
+# job_description = "We are seeking a skilled data scientist to join our team. You will be responsible for analyzing and interpreting complex data sets to discover actionable insights."
 
 
 def scoreJobDescription(job_title, job_description):

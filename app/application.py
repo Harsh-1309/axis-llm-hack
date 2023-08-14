@@ -6,7 +6,11 @@ import openai
 app = Flask(__name__)
 # openai.api_key = "YOUR_OPENAI_API_KEY"
 
-JD_SCORE_DATA_FILE = "app/all_resume_data/jd_score_imp.json"
+from dotenv import load_dotenv
+
+load_dotenv()
+JD_SCORE_DATA_FILE = os.getenv("JD_SCORE_DATA_FILE")
+
 
 def load_data():
     try:
@@ -31,9 +35,9 @@ def index():
         
         accepted_values=["yes","Yes","y","Y"]
         if accept_desc in accepted_values:
-            accept_desc=True
+            accept_desc="yes"
         else:
-            accept_desc=False
+            accept_desc="no"
         data=[]
         data.append(
             {
