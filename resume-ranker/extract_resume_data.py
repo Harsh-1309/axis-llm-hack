@@ -115,6 +115,6 @@ def extract_all_resume_data(folder_path="all_candidate_resumes/"):
             )
     save_data(data)
 
-    return "All extraction successful"
+    return "All extraction successful", data
 
 # print(extract_all_resume_data())
