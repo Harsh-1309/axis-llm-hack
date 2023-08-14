@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "job_title": "ML Engineer",
+        "old_description": "test test ",
+        "score": 6.0,
+        "new_description": "Job Description: Quality Assurance Tester\n\nAre you passionate about ensuring the highest level of quality in software applications? Are you detail-oriented, highly motivated, and possess exceptional problem-solving skills? We are seeking a proactive and dedicated individual to join our team as a Quality Assurance Tester.\n\nResponsibilities:\n- Perform thorough testing of software applications to ensure they meet functional requirements, performance targets, and design specifications\n- Create and execute test cases to verify application functionality, usability, and compatibility across different platforms and devices\n- Identify, analyze, and report defects or issues found during testing, while providing detailed and actionable feedback to developers and stakeholders\n- Collaborate with cross-functional teams to understand project requirements, feature specifications, and desired outcomes\n- Participate in design and development meetings to provide testing insights, early identification of potential quality issues, and recommendations for improvements\n- Stay updated with current industry trends and best practices in software testing methodologies and tools\n- Contribute to the development and maintenance of test plans, test scripts, and test strategies\n- Provide timely status updates on testing progress and actively engage in problem-solving discussions\n\nRequirements:\n- Bachelor's degree in Computer Science or a related field (relevant work experience may be considered)\n- Proven experience in software testing, preferably within a quality assurance or testing role\n- Strong understanding of software testing techniques, methodologies, and best practices\n- Proficient in creating and executing test cases, test scripts, and test scenarios\n- Familiarity with software development life cycle (SD",
+        "accept_new_desc": "True"
+    }
+]

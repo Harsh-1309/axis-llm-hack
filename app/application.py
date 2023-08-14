@@ -34,8 +34,8 @@ def index():
             accept_desc=True
         else:
             accept_desc=False
-
-        data.append([
+        data=[]
+        data.append(
             {
                 "job_title": job_title,
                 "old_description": job_description,
@@ -43,7 +43,7 @@ def index():
                 "new_description": improvement,
                 "accept_new_desc": str(accept_desc)
             }
-            ]
+            
         )
         save_data(data)
 
