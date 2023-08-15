@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
 }
 
 .container {
@@ -13,34 +14,37 @@ body {
 
 /* Styling for input_candidate_id.html */
 #input-form {
-    background-color: #f5f5f5;
+    background-color: #e74c3c; /* Red accent color */
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 #submit-button {
-    background-color: #e74c3c; /* Red accent color */
+    background-color: #c0392b; /* Darker red on hover */
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 #submit-button:hover {
-    background-color: #c0392b; /* Darker red on hover */
+    background-color: #e74c3c; /* Red accent color */
 }
 
 /* Styling for answer_questions.html */
 .question-container {
-    background-color: #f5f5f5;
+    background-color: #e74c3c; /* Red accent color */
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 .question {
@@ -56,7 +60,7 @@ body {
 }
 
 .submit-button {
-    background-color: #e74c3c; /* Red accent color */
+    background-color: #c0392b; /* Darker red on hover */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -67,5 +71,5 @@ body {
 }
 
 .submit-button:hover {
-    background-color: #c0392b; /* Darker red on hover */
+    background-color: #e74c3c; /* Red accent color */
 }

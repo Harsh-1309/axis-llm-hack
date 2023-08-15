@@ -78,5 +78,25 @@
                 "10": "Describe a time when you faced a situation with conflicting priorities or deadlines. How did you manage your time and resources to deliver high-quality results within the designated timeframe?"
             }
         }
+    ],
+    [
+        {
+            "candidate_id": "9dc84545-4eb3-43b9-80d4-2d858dfecc61",
+            "candidate_cv": "Candidate not found.",
+            "job_title": "Python Develover",
+            "job_description": "[Company Name] is seeking a motivated and enthusiastic individual to join our team as a [Job Title]. As a [Job Title], you will play a crucial role in [Company Name]'s success, contributing to various aspects of our operations.\n\nResponsibilities:\n- Collaborate closely with the team to [specific task or responsibility]\n- Conduct detailed research and analysis to support key decision-making processes\n- Assist in the development and implementation of [related projects or initiatives]\n- Regularly update and maintain accurate documentation for [relevant processes or procedures]\n- Monitor and report on [relevant metrics or KPIs] to identify areas for improvement\n- Stay updated with industry trends and advancements, applying relevant knowledge to enhance efficiency and effectiveness\n\nRequirements:\n- Bachelor's degree in [relevant field] or equivalent practical experience\n- Strong analytical and problem-solving skills\n- Excellent communication and interpersonal skills\n- Ability to work independently as well as collaboratively in a team environment\n- Proficient in [necessary tools or software]\n- Highly organized with exceptional attention to detail\n- Flexibility to adapt to changing priorities and meet tight deadlines\n\nWe offer competitive compensation along with a comprehensive benefits package, including [specific benefits]. This is an exciting opportunity for individuals looking to contribute to the growth of a dynamic and innovative company.\n\nJoin our team at [Company Name] and be a part of our mission to [Company's mission/vision]. Apply today with your updated resume and cover letter indicating why you are the ideal candidate for this",
+            "candidate_cv_questions": {
+                "1": "Can you provide an example of a project in which you collaborated closely with a team to achieve a specific task or responsibility?",
+                "2": "How do you conduct detailed research and analysis to support key decision-making processes?",
+                "3": "Can you share an example of a project you have worked on where you assisted in its development and implementation?",
+                "4": "How do you ensure accurate documentation for relevant processes or procedures is regularly updated and maintained?",
+                "5": "Can you describe a situation where you monitored and reported on relevant metrics or KPIs to identify areas for improvement?",
+                "6": "How do you stay updated with industry trends and advancements, and how do you apply that knowledge to enhance efficiency and effectiveness in your work?",
+                "7": "Can you provide an example of a problem-solving scenario you have encountered in your previous experience and how you approached solving it?",
+                "8": "How do you effectively communicate and collaborate with team members in both independent and collaborative work environments?",
+                "9": "Can you share an example of a time when you had to adapt to changing priorities and meet tight deadlines? How did you approach it and what was the outcome?",
+                "10": "How do you ensure exceptional attention to detail and organization in your work, and can you share a situation where it made a significant impact on a project or task?"
+            }
+        }
     ]
 ]

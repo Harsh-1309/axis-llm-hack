@@ -14,14 +14,11 @@
                 {% for question_id, question_text in questions.items() %}
                     <li>
                         <label for="answer_{{ question_id }}">{{ question_text }}</label>
-                        <textarea name="answer_{{ question_id }}" id="answer_{{ question_id }}"></textarea>
-                        <!-- <textarea name="answers[{{ question_id }}]"></textarea> -->
-                        <!-- <textarea name="answers[{{ question_id }}]" id="answers[{{ question_id }}]"></textarea> -->
-
+                        <textarea name="answer_{{ question_id }}" id="answer_{{ question_id }}" class="answer-input"></textarea>
                     </li>
                 {% endfor %}
             </ul>
-            <button type="submit">Submit Answers</button>
+            <button type="submit" class="submit-button">Submit Answers</button>
         </form>
     </div>
 </body>
