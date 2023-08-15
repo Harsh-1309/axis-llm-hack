@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortlist Candidates</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='shortlist_candidates.css') }}">
+</head>
+<body>
+    <h1>Shortlist Candidates</h1>
+    <form action="/shortlist_candidates" method="post">
+        <label for="num_candidates">Number of Candidates to Shortlist:</label>
+        <input type="number" id="num_candidates" name="num_candidates" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

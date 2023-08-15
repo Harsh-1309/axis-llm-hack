@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Resumes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='extract_resume.css') }}">
+</head>
+<body>
+    <h1>Extract Resumes</h1>
+    <form action="/extract_resumes" method="post">
+        <label for="folder_path">Folder Path:</label>
+        <input type="text" id="folder_path" name="folder_path" required>
+        <button type="submit">Extract Resumes</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>

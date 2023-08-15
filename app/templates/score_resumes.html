@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Score Resumes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='score_resume.css') }}">
+</head>
+<body>
+    <h1>Score Resumes</h1>
+    <form action="/score_resumes" method="post">
+        <p>Do you want to score the resumes?</p>
+        <label for="score_option_yes">Yes</label>
+        <input type="radio" id="score_option_yes" name="score_option" value="yes" required>
+        <label for="score_option_no">No</label>
+        <input type="radio" id="score_option_no" name="score_option" value="no">
+        <button type="submit">Submit</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>
