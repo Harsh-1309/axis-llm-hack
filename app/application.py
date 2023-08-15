@@ -4,17 +4,17 @@ from jd_score_better.jd_score_better import *
 from resume_ranker.extract_resume_data import *
 from resume_ranker.score_resume import *
 from cv_questions.cv_questions import *
+from cv_questions.rate_question_answers import *
 import openai
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecretkey123!$#'
-# openai.api_key = "YOUR_OPENAI_API_KEY"
-
 from dotenv import load_dotenv
 
 load_dotenv()
 JD_SCORE_DATA_FILE = os.getenv("JD_SCORE_DATA_FILE")
-
+SHORTLISTED_CV_QUESTIONS = os.getenv("SHORTLISTED_CV_QUESTIONS")
+CANDIDATE_ANSWERS=os.getenv("CANDIDATE_ANSWERS")
 
 def load_data():
     try:
@@ -58,14 +58,12 @@ def index():
         return render_template("index.html", job_title=job_title, job_description=job_description, score=score, improvement=improvement, accept_desc=accept_desc)
     return render_template("index.html")
 
-
 @app.route("/extract_resumes", methods=["GET", "POST"])
 def extract_resumes():
     if request.method == "POST":
         folder_path = request.form["folder_path"]
         data_=extract_all_resume_data(folder_path)
-        
-        # return "Resumes extracted successfully." #data_
+
         flash("Resumes extracted successfully.")
         return redirect(url_for("score_resumes"))
     return render_template("extract_resumes.html")
@@ -77,7 +75,6 @@ def score_resumes():
 
         if score_option == "yes":
             data_=score_all_resumes()
-            # return "Resumes scored successfully."
             flash("Resumes scored successfully.")
             return redirect(url_for("shortlist_candidates"))
         else:
@@ -92,7 +89,6 @@ def shortlist_candidates():
         return redirect(url_for("generate_questions", num_candidates=num_candidates))
 
     return render_template("shortlist_candidates.html")
-    # return redirect(url_for("generate_questions", num_candidates=num_candidates))
 
 @app.route("/generate_questions/<int:num_candidates>", methods=["GET", "POST"])
 def generate_questions(num_candidates):
@@ -100,13 +96,54 @@ def generate_questions(num_candidates):
         generate_option = request.form.get("generate_option")
 
         if generate_option == "yes":
-            # Run your script to generate questions
-            # Replace "generate_questions_script.py" with the actual script filename
             data_=generate_questions_for_shortlisted(num_candidates)
             return "Questions generated successfully."
         else:
             return "Questions not generated."
 
     return render_template("generate_questions.html", num_candidates=num_candidates)
+
+@app.route("/answer_questions", methods=["GET", "POST"])
+def answer_questions():
+    if request.method == "POST":
+        candidate_id = request.form.get("candidate_id")
+
+        with open(SHORTLISTED_CV_QUESTIONS, "r") as file:
+            candidates_data = json.load(file)
+
+        candidate_questions = None
+        for a_candidate_details in candidates_data:
+            all_candidate_ques_details = a_candidate_details[0]
+            if all_candidate_ques_details["candidate_id"] == candidate_id:
+                candidate_questions = all_candidate_ques_details["candidate_cv_questions"]
+                break
+
+        if candidate_questions:
+            if request.method == "POST":
+                answers = {question_id: request.form.get(f"answer_{question_id}") for question_id in candidate_questions.keys()}
+                with open(CANDIDATE_ANSWERS, "r") as file:
+                    candidates_answers_data = json.load(file)
+
+                data_to_append = {"candidate_id": candidate_id, "answers": answers}
+                candidates_answers_data.append(data_to_append)
+
+                # with open(CANDIDATE_ANSWERS, "w") as file:
+                #     json.dump(candidates_answers_data, file, indent=4)
+
+                flash("Answers submitted successfully.", "success")
+                return render_template("input_candidate_answers.html", candidate_id=candidate_id, questions=candidate_questions)
+                # return redirect(url_for("thank_you", candidate_id=candidate_id, score=score))
+
+        else:
+            flash("Candidate ID not found.", "error")
+            return redirect(url_for("answer_questions"))
+
+    return render_template("input_candidate_id.html")
+
+@app.route("/display_score")
+def display_score():
+    candidate_score=get_final_score()
+    return render_template("display_score.html", score=candidate_score)
+
 if __name__ == "__main__":
     app.run(debug=True)
