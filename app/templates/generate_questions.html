@@ -3,10 +3,42 @@
 <head>
     <title>Generate Questions</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='generate_questions.css') }}">
+    <style>
+        /* Loader styles */
+        .loader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+        .loader-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
+    <div class="loader" id="loader">
+        <div class="loader-inner"></div>
+    </div>
     <h1>Generate Questions</h1>
-    <form action="{{ url_for('generate_questions', num_candidates=num_candidates) }}" method="post">
+    <form action="{{ url_for('generate_questions', num_candidates=num_candidates) }}" method="post" onsubmit="showLoader()">
         <p>Do you want to generate questions based on the resumes?</p>
         <label for="generate_option_yes">Yes</label>
         <input type="radio" id="generate_option_yes" name="generate_option" value="yes" required>
@@ -14,5 +46,11 @@
         <input type="radio" id="generate_option_no" name="generate_option" value="no">
         <button type="submit">Submit</button>
     </form>
+    <script>
+        function showLoader() {
+            var loader = document.getElementById("loader");
+            loader.style.display = "block";
+        }
+    </script>
 </body>
 </html>

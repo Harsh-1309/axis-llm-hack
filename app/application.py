@@ -87,7 +87,7 @@ def score_resumes():
 def shortlist_candidates():
     if request.method == "POST":
         num_candidates = int(request.form["num_candidates"])
-        return redirect(url_for("generate_questions", num_candidates=num_candidates))
+        return redirect(url_for("generate_questions", num_candidates=int(num_candidates)))
 
     return render_template("shortlist_candidates.html")
 

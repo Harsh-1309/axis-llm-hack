@@ -3,8 +3,40 @@
 <head>
     <title>Score Resumes</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='score_resume.css') }}">
+    <style>
+        /* Additional loader styles */
+        .loader-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
+    <div class="loader-container" id="loaderContainer">
+        <div class="loader"></div>
+    </div>
     <h1>Score Resumes</h1>
     <form action="/score_resumes" method="post">
         <p>Do you want to score the resumes?</p>
@@ -12,7 +44,7 @@
         <input type="radio" id="score_option_yes" name="score_option" value="yes" required>
         <label for="score_option_no">No</label>
         <input type="radio" id="score_option_no" name="score_option" value="no">
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="showLoader()">Submit</button>
     </form>
     {% with messages = get_flashed_messages() %}
       {% if messages %}
@@ -23,5 +55,12 @@
         </ul>
       {% endif %}
     {% endwith %}
+
+    <script>
+        function showLoader() {
+            var loaderContainer = document.getElementById("loaderContainer");
+            loaderContainer.style.display = "block";
+        }
+    </script>
 </body>
 </html>
