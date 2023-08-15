@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Candidate Questions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='get_answers.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="{{ url_for('answer_questions') }}">
+            <h2>Answer Questions for Candidate ID: {{ candidate_id }}</h2>
+            <ul>
+                {% for question_id, question_text in questions.items() %}
+                    <li>
+                        <label for="answer_{{ question_id }}">{{ question_text }}</label>
+                        <textarea name="answer_{{ question_id }}" id="answer_{{ question_id }}"></textarea>
+                        <!-- <textarea name="answers[{{ question_id }}]"></textarea> -->
+                        <!-- <textarea name="answers[{{ question_id }}]" id="answers[{{ question_id }}]"></textarea> -->
+
+                    </li>
+                {% endfor %}
+            </ul>
+            <button type="submit">Submit Answers</button>
+        </form>
+    </div>
+</body>
+</html>

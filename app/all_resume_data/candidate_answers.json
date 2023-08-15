@@ -1,0 +1,17 @@
+[
+    {
+        "candidate_id": "9dc84545-4eb3-43b9-80d4-2d858dfecc63",
+        "answers": {
+            "1": "Built data preprocessing pipelines using Python, Pandas, NumPy, and TensorFlow Extended to transform and clean data effectively.",
+            "2": "Utilized Azure services and Docker to deploy and manage ML models, ensuring scalable data processing in a cloud environment.",
+            "3": "Handled data cleaning, feature engineering, and normalization tasks to ensure data quality for analysis.",
+            "4": "Collaborated with cross-functional teams to establish MLOps practices, streamlining model deployment and versioning.",
+            "5": "Developed and maintained robust web apps using Python, Django, Pandas, and NumPy for seamless user experiences.",
+            "6": "Implemented unit tests to verify code functionality; for instance, I tested data processing functions in a recent project.",
+            "7": "Designed REST APIs for smooth integration among app components, enabling effective communication between services.",
+            "8": "Integrated ML models into systems, enhancing software functionality by providing predictive insights.",
+            "9": "Researched malware analysis using deep learning, yielding improved accuracy over previous methods.",
+            "10": "Created an AI yoga platform that analyzes live video input for accurate yoga pose feedback, enhancing user practice."
+        }
+    }
+]
