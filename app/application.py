@@ -8,13 +8,15 @@ from cv_questions.rate_question_answers import *
 import openai
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'mysecretkey123!$#'
+
 from dotenv import load_dotenv
 
 load_dotenv()
 JD_SCORE_DATA_FILE = os.getenv("JD_SCORE_DATA_FILE")
 SHORTLISTED_CV_QUESTIONS = os.getenv("SHORTLISTED_CV_QUESTIONS")
 CANDIDATE_ANSWERS=os.getenv("CANDIDATE_ANSWERS")
+SECRET_KEY=os.getenv("SECRET_KEY")
+app.config['SECRET_KEY'] = SECRET_KEY
 
 def load_data():
     try:
