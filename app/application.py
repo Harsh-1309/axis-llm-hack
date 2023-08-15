@@ -26,8 +26,9 @@ def load_data():
 def save_data(data):
     with open(JD_SCORE_DATA_FILE, "w") as file:
         json.dump(data, file, indent=4)
+        
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/update_jd", methods=["GET", "POST"])
 def index():
     data = load_data()
     if request.method == "POST":
