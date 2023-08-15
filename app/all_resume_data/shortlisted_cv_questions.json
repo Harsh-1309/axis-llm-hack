@@ -58,5 +58,25 @@
                 "10": "Can you explain the AI-based yoga platform you developed? How does it take live video input and output the accuracy of the yoga asana performed?"
             }
         }
+    ],
+    [
+        {
+            "candidate_id": "9dc84545-4eb3-43b9-80d4-2d858dfecc61",
+            "candidate_cv": "Candidate not found.",
+            "job_title": "Data Scientist",
+            "job_description": "We are seeking a skilled data scientist to join our team. You will be responsible for analyzing and interpreting complex data sets to discover actionable insights.",
+            "candidate_cv_questions": {
+                "1": "Can you provide examples of your experience in analyzing and interpreting complex data sets? How have you used these insights to drive actionable outcomes?",
+                "2": "What programming languages and statistical tools are you proficient in? How have you applied these skills in your previous data science roles?",
+                "3": "Can you explain your approach to developing predictive models? How have you used these models to make accurate predictions or forecasts?",
+                "4": "Share an example of a challenging data analysis project you have worked on. How did you overcome obstacles or bottlenecks during the analysis process?",
+                "5": "How do you ensure data quality and accuracy in your analyses? Can you describe any measures or techniques you use to address potential data biases or inconsistencies?",
+                "6": "In your opinion, what are the most important techniques or algorithms for data analysis and why? Can you provide examples of when you have applied these techniques effectively?",
+                "7": "How do you approach communicating complex data analysis findings to stakeholders who may not have a strong background in data science? Can you share an example where you successfully conveyed insights to a non-technical audience?",
+                "8": "What steps do you take to stay updated with the latest developments and trends in the field of data science? Can you provide examples of how you have applied these advancements in your work?",
+                "9": "How do you handle working with large and messy datasets? Can you explain any strategies or approaches you have used to extract valuable insights from such datasets?",
+                "10": "Describe a time when you faced a situation with conflicting priorities or deadlines. How did you manage your time and resources to deliver high-quality results within the designated timeframe?"
+            }
+        }
     ]
 ]
